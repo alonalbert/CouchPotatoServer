@@ -348,7 +348,7 @@ class MovieBase(MovieTypeBase):
             # This workaround tries to extract a valid release-date from the 'released' field of the media info
             # which seems to be valid but seems to vary in format.
             # If it fails to convert the date, it uses the expires value.
-            if dates.get('theater') == 0:
+            if dates['theater'] == 0:
                 released = media.get('info').get('released')
                 formats = ['%d %b %Y', '%Y-%m-%d']
                 for format in formats:
